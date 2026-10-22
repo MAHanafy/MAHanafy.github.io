@@ -57,6 +57,23 @@
 
   <main>
 
+    <!-- Photo gallery. To add a photo: put it in images/gallery/ and copy one <figure> line. -->
+    <section class="gallery" id="gallery" aria-label="Photo gallery">
+      <div class="gallery-track" id="galleryTrack">
+        <figure class="slide"><img src="images/gallery/arna-hospital.jpg" alt="ARNA nursing robot during nurse-guided walking in a hospital" loading="lazy"><figcaption>ARNA in a hospital trial</figcaption></figure>
+        <figure class="slide"><img src="images/gallery/iros-experiment.jpg" alt="Participant steering a simulated robot with EEG motor imagery" loading="lazy"><figcaption>EEG-controlled robot navigation</figcaption></figure>
+        <figure class="slide"><img src="images/gallery/arna-ambulation.jpg" alt="ARNA supporting patient ambulation in nursing education" loading="lazy"><figcaption>Nursing-education ambulation study</figcaption></figure>
+        <figure class="slide"><img src="images/gallery/arna-platform.jpg" alt="ARNA platform with sensorized handlebar and Kinova arm" loading="lazy"><figcaption>The ARNA platform</figcaption></figure>
+      </div>
+      <button class="gal-btn prev" id="galPrev" type="button" aria-label="Previous photos">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="gal-btn next" id="galNext" type="button" aria-label="Next photos">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="gal-dots" id="galDots"></div>
+    </section>
+
     <section id="about">
       <h2>About Me</h2>
       <p>I am a Ph.D. candidate and Graduate Research Assistant at the Louisville Automation and Robotics Research Institute (LARRI), University of Louisville, advised by Dr. Dan O. Popa.
@@ -275,6 +292,50 @@
       root.setAttribute('data-theme', next);
       try { localStorage.setItem('theme', next); } catch (e) {}
     });
+  })();
+
+  (function () {
+    var track = document.getElementById('galleryTrack');
+    if (!track) return;
+    var slides = track.querySelectorAll('.slide');
+    var dotsBox = document.getElementById('galDots');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var timer;
+
+    function step() { return slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth; }
+    function perView() { return Math.max(1, Math.round(track.clientWidth / step())); }
+    function pages() { return Math.max(1, slides.length - perView() + 1); }
+    function index() { return Math.round(track.scrollLeft / step()); }
+    function go(i) {
+      var n = pages(); i = (i + n) % n;
+      track.scrollTo({ left: i * step(), behavior: reduce ? 'auto' : 'smooth' });
+    }
+    function drawDots() {
+      dotsBox.innerHTML = '';
+      for (var i = 0; i < pages(); i++) {
+        var b = document.createElement('button');
+        b.type = 'button'; b.setAttribute('aria-label', 'Show photo ' + (i + 1));
+        (function (k) { b.addEventListener('click', function () { go(k); restart(); }); })(i);
+        dotsBox.appendChild(b);
+      }
+      mark();
+    }
+    function mark() {
+      var cur = index();
+      Array.prototype.forEach.call(dotsBox.children, function (d, i) { d.classList.toggle('on', i === cur); });
+    }
+    function restart() {
+      clearInterval(timer);
+      if (!reduce && pages() > 1) timer = setInterval(function () { go(index() + 1); }, 5000);
+    }
+
+    document.getElementById('galPrev').addEventListener('click', function () { go(index() - 1); restart(); });
+    document.getElementById('galNext').addEventListener('click', function () { go(index() + 1); restart(); });
+    track.addEventListener('scroll', function () { window.requestAnimationFrame(mark); }, { passive: true });
+    track.addEventListener('pointerenter', function () { clearInterval(timer); });
+    track.addEventListener('pointerleave', restart);
+    window.addEventListener('resize', drawDots);
+    drawDots(); restart();
   })();
 </script>
 </body>
