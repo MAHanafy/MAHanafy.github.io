@@ -21,14 +21,13 @@
 <header class="nav">
   <div class="shell nav-inner">
     <a class="brand" href="#top">Mohamed A. Hanafy</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#media">Media</a>
-      <a href="#publications">Publications</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#awards">Awards</a>
-    </nav>
+    <div class="search" id="search" role="search">
+      <button class="search-open" id="searchOpen" type="button" aria-label="Search this page">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
+      </button>
+      <input id="searchInput" type="search" placeholder="Search (e.g., EEG, PETRA, ARNA)" aria-label="Search this page" autocomplete="off">
+      <span class="search-count" id="searchCount" aria-live="polite"></span>
+    </div>
     <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
       <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
       <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
@@ -45,17 +44,35 @@
     <p class="title">Ph.D. Candidate</p>
     <p class="affil">Electrical and Computer Engineering<br>University of Louisville<br>LARRI, Louisville, KY</p>
     <ul class="profiles">
-      <li><a href="mailto:mohamed.hanafy@louisville.edu"><span class="ic">@</span>Email</a></li>
-      <li><a href="https://scholar.google.com/citations?user=9N1AxUoAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span class="ic">GS</span>Google Scholar</a></li>
-      <li><a href="https://orcid.org/0009-0000-3855-9502" target="_blank" rel="noopener"><span class="ic">iD</span>ORCID</a></li>
-      <li><a href="https://www.researchgate.net/profile/Mohamed-Hanafy-18" target="_blank" rel="noopener"><span class="ic">RG</span>ResearchGate</a></li>
-      <li><a href="https://www.linkedin.com/in/mahanafy/" target="_blank" rel="noopener"><span class="ic">in</span>LinkedIn</a></li>
-      <li><a href="https://github.com/MAHanafy" target="_blank" rel="noopener"><span class="ic">&lt;/&gt;</span>GitHub</a></li>
-      <li><a href="cv.pdf" target="_blank" rel="noopener"><span class="ic">CV</span>Curriculum Vitae</a></li>
+      <li><a href="mailto:mohamed.hanafy@louisville.edu"><span class="ic ic-mail"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg></span>Email</a></li>
+      <li><a href="https://scholar.google.com/citations?user=9N1AxUoAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span class="ic ic-gs"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M12 3L1 9.5l4 2.4V16c0 2.4 3.1 4.3 7 4.3s7-1.9 7-4.3v-4.1l4-2.4z"/><circle cx="12" cy="14.6" r="3.2" fill="#fff"/></svg></span>Google Scholar</a></li>
+      <li><a href="https://orcid.org/0009-0000-3855-9502" target="_blank" rel="noopener"><span class="ic ic-orcid">iD</span>ORCID</a></li>
+      <li><a href="https://www.researchgate.net/profile/Mohamed-Hanafy-18" target="_blank" rel="noopener"><span class="ic ic-rg">R<sup>G</sup></span>ResearchGate</a></li>
+      <li><a href="https://www.linkedin.com/in/mahanafy/" target="_blank" rel="noopener"><span class="ic ic-in">in</span>LinkedIn</a></li>
+      <li><a href="https://github.com/MAHanafy" target="_blank" rel="noopener"><span class="ic ic-gh"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></span>GitHub</a></li>
+      <li><a href="cv.pdf" target="_blank" rel="noopener"><span class="ic ic-cv"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></span>Curriculum Vitae</a></li>
     </ul>
   </aside>
 
   <main>
+
+    <nav class="pills" id="pills" aria-label="Page sections">
+      <a class="pill" href="#about" data-sec="about"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Summary</a>
+      <a class="pill" href="#news" data-sec="news"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>News</a>
+      <a class="pill" href="#media" data-sec="media"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg>Talks</a>
+      <a class="pill" href="#research" data-sec="research"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/></svg>Interests</a>
+      <a class="pill" href="#publications" data-sec="publications"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h7"/></svg>Publications</a>
+      <a class="pill" href="#conferences" data-sec="conferences"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v11M8 7a4 4 0 0 0 8 0V5a4 4 0 0 0-8 0z"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg>Conferences</a>
+      <a class="pill" href="#projects" data-sec="projects"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v12H3z"/><path d="M8 7V5h8v2"/></svg>Projects</a>
+      <a class="pill" href="#experience" data-sec="experience"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V4h6v3M3 13h18"/></svg>Experience</a>
+      <a class="pill" href="#teaching" data-sec="teaching"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20l4-4 4 4M7 9h6"/></svg>Teaching</a>
+      <a class="pill" href="#education" data-sec="education"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg>Education</a>
+      <a class="pill" href="#mentoring" data-sec="mentoring"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20c0-3 3-5 6-5s6 2 6 5M14 20c0-2 2-4 4-4s4 2 4 4"/></svg>Mentorship</a>
+      <a class="pill" href="#awards" data-sec="awards"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13L7 21l5-3 5 3-1.5-8"/></svg>Awards</a>
+      <a class="pill" href="#academies" data-sec="academies"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4z"/><path d="M8 9h8M8 13h6"/></svg>Academies</a>
+      <a class="pill" href="#service" data-sec="service"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-8-5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 6-8 11-8 11z"/></svg>Service</a>
+      <a class="pill" href="#contact" data-sec="contact"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Contact</a>
+    </nav>
 
     <!-- Photo gallery. To add a photo: put it in images/gallery/ and copy one <figure> line. -->
     <section class="gallery" id="gallery" aria-label="Photo gallery">
@@ -76,7 +93,7 @@
     </section>
 
     <section id="about">
-      <h2>About Me</h2>
+      <h2>Professional Summary</h2>
       <p>I am a Ph.D. candidate and Graduate Research Assistant at the Louisville Automation and Robotics Research Institute (LARRI), University of Louisville, advised by Dr. Dan O. Popa.
         I work on AI-driven brain-computer interfaces (BCIs), multimodal signal processing, adaptive robotic control, and human-robot interaction.</p>
       <p>My NSF-supported research focuses on decoding human intent in real time from EEG, physiological, behavioral, and speech signals
@@ -102,7 +119,7 @@
     </section>
 
     <section id="media">
-      <h2>Research in Action</h2>
+      <h2>Talks and Demonstrations</h2>
       <div class="media-grid">
         <figure class="media-card">
           <video controls preload="metadata" playsinline poster="media/iros26-eeg-cover.jpg">
@@ -135,7 +152,7 @@
     </section>
 
     <section id="research">
-      <h2>Research Interests</h2>
+      <h2>Scientific Interests</h2>
       <div class="cards">
         <div class="card"><h3>EEG Brain-Computer Interfaces</h3><p>Real-time motor-intent decoding, robustness of motor-imagery BCIs across sessions and time, and BCI control of assistive robots.</p></div>
         <div class="card"><h3>Neural and Adaptive Control</h3><p>Neuroadaptive controllers and adaptive user interfaces that make robot teleoperation and physical interaction smoother and safer.</p></div>
@@ -269,6 +286,24 @@
       </div>
     </section>
 
+    <section id="conferences">
+      <h2>Conferences and Posters</h2>
+      <div class="confs">
+        <div class="conf"><span class="c-date">Dec 2026</span><div><p class="c-title"><span class="ctype poster">Poster</span>The Effects of Child Age and Hearing Status on Prosodic Characteristics of Maternal and Paternal Speech</p><p class="c-venue">191st Meeting of the Acoustical Society of America, Baltimore, MD (December 15 to 17)</p><p class="c-links"><a href="https://acousticalsociety.org/baltimore2026/" target="_blank" rel="noopener">Meeting</a></p></div></div>
+        <div class="conf"><span class="c-date">Nov 2026</span><div><p class="c-title"><span class="ctype poster">Poster</span>Motor Imagery as a Discrete Intent Cue for Assistive Robot Navigation</p><p class="c-venue">IEEE BRAIN Discovery and Neurotechnology Workshop, Washington, DC (November 11 to 13)</p><p class="c-links"><a href="https://brain.ieee.org/2026-ieee-brain-discovery-neurotechnology-workshop/" target="_blank" rel="noopener">Workshop</a></p></div></div>
+        <div class="conf"><span class="c-date">Oct 2026</span><div><p class="c-title"><span class="ctype talk">Talk</span>Toward Robust Assistive Robot Navigation with EEG Motor-Imagery</p><p class="c-venue">IEEE/RSJ IROS 2026, Workshop on Nonverbal Cues for Human-Robot Cooperative Intelligence, Pittsburgh, PA. Flash talk and poster.</p><p class="c-links"><a href="https://nocworkshop.github.io/2026-IROS/" target="_blank" rel="noopener">Workshop</a> <a href="media/iros26-eeg-poster.pdf" target="_blank" rel="noopener">Poster</a></p></div></div>
+        <div class="conf"><span class="c-date">Oct 2026</span><div><p class="c-title"><span class="ctype poster">Poster</span>Evaluation of a Robotic Nursing Assistant from Neuroadaptive Ambulation to Hospital Deployment</p><p class="c-venue">IEEE/RSJ IROS 2026, Out of the Lab Workshop on Rehabilitation and Assistive Robotics, Pittsburgh, PA</p><p class="c-links"><a href="https://sites.google.com/view/out-of-lab-iros2026workshop/home" target="_blank" rel="noopener">Workshop</a> <a href="media/iros26-arna-poster.jpg" target="_blank" rel="noopener">Poster</a></p></div></div>
+        <div class="conf"><span class="c-date">Mar 2026</span><div><p class="c-title"><span class="ctype poster">Poster</span>Outcomes Important for a Successful Transition from Foster Care to Adulthood in Kentucky</p><p class="c-venue">11th Annual Engaged Scholarship Symposium, University of Louisville</p><p class="c-links"><a href="https://community.louisville.edu/programs/engaged-scholarship-symposium" target="_blank" rel="noopener">Symposium</a></p></div></div>
+        <div class="conf"><span class="c-date">2025</span><div><p class="c-title"><span class="ctype talk">Talk</span>A Robust EEG Brain-Computer Interface Approach for Decoding Hand and Foot Motor Imagery</p><p class="c-venue">ACM PETRA 2025. I also took part in the NSF Doctoral Consortium.</p><p class="c-links"><a href="#media">Video</a> <a href="https://doi.org/10.1145/3733155.3733220" target="_blank" rel="noopener">Paper</a></p></div></div>
+        <div class="conf"><span class="c-date">2025</span><div><p class="c-title"><span class="ctype attended">Attended</span>Adaptive User Interface with Parallel Neural Networks for Robot Teleoperation</p><p class="c-venue">IEEE ICRA 2025, where our RA-L paper was presented</p><p class="c-links"><a href="https://doi.org/10.1109/LRA.2024.3518085" target="_blank" rel="noopener">Paper</a></p></div></div>
+        <div class="conf"><span class="c-date">2024</span><div><p class="c-title"><span class="ctype talk">Talk</span>Assessment of BCI Performance for Human-Robot Interaction</p><p class="c-venue">ACM PETRA 2024, with a workshop paper that won the student paper award, and the NSF Doctoral Consortium</p><p class="c-links"><a href="https://doi.org/10.1145/3652037.3663957" target="_blank" rel="noopener">Paper</a></p></div></div>
+        <div class="conf"><span class="c-date">2024</span><div><p class="c-title"><span class="ctype poster">Poster</span>Controlling a Robotic Arm with Brain Activity via a Binary Classifier</p><p class="c-venue">KY NSF EPSCoR SUPERCOLLIDER, Lexington, KY</p></div></div>
+        <div class="conf"><span class="c-date">2024</span><div><p class="c-title"><span class="ctype poster">Poster</span>Personalized Adaptive User Interfaces for Robot Teleoperation</p><p class="c-venue">KY NSF EPSCoR SUPERCOLLIDER, Lexington, KY</p></div></div>
+        <div class="conf"><span class="c-date">2017</span><div><p class="c-title"><span class="ctype talk">Talk</span>Compressed Sensing for Reliable Body Area Propagation with Efficient Signal Reconstruction</p><p class="c-venue">29th International Conference on Microelectronics (ICM)</p><p class="c-links"><a href="https://doi.org/10.1109/ICM.2017.8268855" target="_blank" rel="noopener">Paper</a></p></div></div>
+      </div>
+      <p class="muted small c-also">Also attended IEEE SoutheastCon 2026.</p>
+    </section>
+
     <section id="projects">
       <h2>Funded Research Projects</h2>
       <div class="cards">
@@ -278,7 +313,7 @@
         <div class="card"><h3>Jon Rieger Seed Grant</h3><p>AI-enabled analysis of emotions in daylong child-centered speech recordings, with UofL and Washington State University.</p><span class="tag">Seed Grant</span></div>
       </div>
 
-      <h2 class="mt">Innovation</h2>
+      <h2 class="mt">Entrepreneurship and Innovation</h2>
       <div class="cards one">
         <a class="card link-card" href="certificates/launchit-mind-pilot.jpg" target="_blank" rel="noopener">
           <h3>Mind Pilot</h3>
@@ -287,7 +322,7 @@
         </a>
       </div>
 
-      <h2 class="mt">Code</h2>
+      <h2 class="mt">Code and Datasets</h2>
       <div class="cards">
         <a class="card link-card" href="https://github.com/MAHanafy/EEG_Data_Collector" target="_blank" rel="noopener"><h3>EEG Data Collector</h3><p>Tools for recording EEG motor-imagery sessions.</p><span class="tag">Python</span></a>
         <a class="card link-card" href="https://github.com/MAHanafy/Motor_Imagery_WS_CS_P" target="_blank" rel="noopener"><h3>Motor Imagery Pipeline</h3><p>Motor-imagery classification and evaluation code.</p><span class="tag">Python</span></a>
@@ -297,13 +332,18 @@
     </section>
 
     <section id="experience">
-      <h2>Experience</h2>
+      <h2>Research Experience</h2>
       <div class="timeline">
         <div class="t-item"><p class="t-title">Graduate Research Assistant: AI, BCI, Robotics, and HRI <span class="muted">Sep 2023 to present</span></p><p class="muted">LARRI, University of Louisville</p><p>EEG-based BCI frameworks, neuroadaptive control, ARNA healthcare robotics, and computer vision for logistics. Mentor a multidisciplinary student BCI team.</p></div>
         <div class="t-item"><p class="t-title">Research Collaborator: Multimodal Speech and Healthcare Analytics <span class="muted">Jan 2026 to present</span></p><p class="muted">University of Louisville and Washington State University</p><p>Automated acoustic-analysis pipelines and speech emotion recognition for child-centered speech recordings.</p></div>
-        <div class="t-item"><p class="t-title">Graduate Teaching Assistant <span class="muted">2023 to 2026</span></p><p class="muted">Department of ECE, University of Louisville</p><p>Control systems, digital signal processing, embedded systems, and microprocessor laboratories.</p></div>
         <div class="t-item"><p class="t-title">Graduate Research Assistant: Computer Vision and Assistive Technologies <span class="muted">Jan 2022 to Aug 2023</span></p><p class="muted">CVIP Laboratory, University of Louisville</p><p>Visual assistance for visually impaired people; 3D street mapping from monocular video with NeRFs.</p></div>
-        <div class="t-item"><p class="t-title">Research and Teaching Assistant <span class="muted">2015 to 2021</span></p><p class="muted">Electronics and Communications Engineering, Zagazig University, Egypt</p><p>Compressed sensing and block sparse Bayesian learning for low-power EEG telemonitoring over body area networks.</p></div>
+        <div class="t-item"><p class="t-title">Research Assistant <span class="muted">2015 to 2021</span></p><p class="muted">Electronics and Communications Engineering, Zagazig University, Egypt</p><p>Compressed sensing and block sparse Bayesian learning for low-power EEG telemonitoring over body area networks.</p></div>
+      </div>
+
+      <h2 class="mt" id="teaching">Teaching Experience</h2>
+      <div class="timeline">
+        <div class="t-item"><p class="t-title">Graduate Teaching Assistant <span class="muted">2023 to 2026</span></p><p class="muted">Department of Electrical and Computer Engineering, University of Louisville</p><p>Taught and supported labs in control systems, digital signal processing, embedded systems, and advanced microprocessors. I also reworked several lab handouts and grading rubrics.</p></div>
+        <div class="t-item"><p class="t-title">Teaching Assistant <span class="muted">2015 to 2021</span></p><p class="muted">Department of Electronics and Communications Engineering, Zagazig University, Egypt</p><p>Led tutorials and labs in signal and image processing, analog and digital communications, logic design, electronic circuits, wave propagation, and numerical analysis. Supervised undergraduate capstone projects.</p></div>
       </div>
 
       <h2 class="mt" id="education">Education</h2>
@@ -313,18 +353,24 @@
         <div class="t-item"><p class="t-title">B.S., Electronics and Communications Engineering <span class="muted">2008 to 2013</span></p><p class="muted">Zagazig University, Egypt</p><p>Excellent with honors; ranked 1st in class</p></div>
       </div>
 
-      <h2 class="mt" id="mentoring">Student Mentoring</h2>
-      <p class="muted small">Students I have worked with closely on research, most of them as coauthors.</p>
+      <h2 class="mt" id="mentoring">Student Mentorship and Co-Supervision</h2>
+      <p class="muted small">Students I have mentored in the lab, most of them as coauthors on our papers.</p>
+      <h3 class="sub">Graduate Students</h3>
       <div class="mentees">
-        <div class="mentee"><p class="m-name">Henry L. Reynolds, Jacob Jones, Desmond Harris</p><p>EEG intent recognition for human robot interaction. This led to two PETRA 2024 papers, and the one Henry led won the workshop student paper award.</p></div>
-        <div class="mentee"><p class="m-name">Saykhun Yusufjonov and Djaykhun Yusufjonov</p><p>Decoding hand and foot motor imagery, and checking how well those decoders hold up from one session to the next. We published at PETRA 2025 and in <em>Technologies</em>. Saykhun was also my Mind Pilot teammate.</p></div>
-        <div class="mentee"><p class="m-name">Ashutosh Prakash</p><p>Coauthor on the EEG navigation study shown at IROS 2026. I in turn contributed to his <em>Electronics</em> paper on neuroadaptive control.</p></div>
-        <div class="mentee"><p class="m-name">Undergraduate research team, Jon Rieger Seed Grant</p><p>Speech emotion recognition on daylong recordings of young children. I supervise the students on annotation, model training, and the acoustic analysis.</p></div>
+        <div class="mentee"><p class="m-name">Henry L. Reynolds</p><p>Compared one handed and two handed EEG intent recognition for robot control. His PETRA 2024 paper won the workshop student paper award.</p></div>
+        <div class="mentee"><p class="m-name">Jacob Jones</p><p>EEG intent recognition for human robot interaction; coauthor on both PETRA 2024 papers.</p></div>
+      </div>
+      <h3 class="sub">Undergraduate Students</h3>
+      <div class="mentees">
+        <div class="mentee"><p class="m-name">Desmond Harris</p><p>Worked on BCI performance assessment and EEG intent recognition. Coauthor on two PETRA 2024 papers.</p></div>
+        <div class="mentee"><p class="m-name">Saykhun Yusufjonov and Djaykhun Yusufjonov</p><p>Hand and foot motor imagery decoding, and how stable those decoders stay across sessions. Our work appeared at PETRA 2025 and in <em>Technologies</em>, and Saykhun went on to the IROS 2026 workshop paper. He was also my Mind Pilot teammate.</p></div>
+        <div class="mentee"><p class="m-name">Hunter Graiser</p><p>Undergraduate research assistant in the lab.</p></div>
+        <div class="mentee"><p class="m-name">Mourad Gad</p><p>Summer research intern.</p></div>
       </div>
     </section>
 
     <section id="awards">
-      <h2>Awards and Honors</h2>
+      <h2>Scientific Awards and Honors</h2>
       <div class="honors">
         <article class="honor has-img">
           <a class="h-thumb" href="certificates/theobald-scholarship.jpg" target="_blank" rel="noopener"><img src="certificates/theobald-scholarship-thumb.jpg" alt="Theobald Scholarship Award" loading="lazy"></a><div class="h-body"><p class="h-title">Theobald Scholarship Award</p><p class="h-org">Department of Electrical and Computer Engineering, J.B. Speed School of Engineering &middot; April 2025</p><p class="h-desc">Given for research and scholarship. The Edward J. and Eunice B. Theobald Scholarship Fund pays for it and supports electrical engineering students at Speed School.</p><p class="h-links"><a href="certificates/theobald-scholarship.jpg" target="_blank" rel="noopener">Certificate</a></p></div>
@@ -346,7 +392,7 @@
         </article>
       </div>
 
-      <h2 class="mt" id="academies">Academies and Workshops</h2>
+      <h2 class="mt" id="academies">Scientific Academies and Workshops</h2>
       <div class="honors">
         <article class="honor has-img">
           <a class="h-thumb" href="certificates/community-engagement-academy.jpg" target="_blank" rel="noopener"><img src="certificates/community-engagement-academy-thumb.jpg" alt="Community Engaged Scholarship Academy" loading="lazy"></a><div class="h-body"><p class="h-title">Community Engaged Scholarship Academy</p><p class="h-org">UofL Graduate School &middot; Fall 2025</p><p class="h-desc">A semester of sessions on research done in partnership with community groups. The certificate was handed out at the 2026 Graduate Dean&rsquo;s Reception.</p><p class="h-links"><a href="certificates/community-engagement-academy.jpg" target="_blank" rel="noopener">Certificate</a> <a href="https://louisville.edu/graduate/plan/community-engagement-academy" target="_blank" rel="noopener">Program</a></p></div>
@@ -362,8 +408,8 @@
         </article>
       </div>
 
-      <h2 class="mt">Service</h2>
-      <p><strong>Reviewer:</strong></p>
+      <h2 class="mt" id="service">Scholarly Service</h2>
+      <h3 class="sub">Peer Review</h3>
       <ul class="plain service">
         <li>IEEE Transactions on Systems, Man, and Cybernetics: Systems</li>
         <li>IEEE Journal of Biomedical and Health Informatics (JBHI)</li>
@@ -375,8 +421,10 @@
         <li>IEEE International Conference on Smart Mobility</li>
         <li>IEEE International Conference on Control, Automation and Instrumentation (IC2AI)</li>
       </ul>
-      <p><strong>Program Committee:</strong> International Symposium on Embodied Intelligence and Humanoid Robots (Roboi), 2025.</p>
-      <p><strong>Judge:</strong> Redbird Robotics; VEX V5RC Kentucky State Championship.</p>
+      <h3 class="sub">Program Committee</h3>
+      <p>International Symposium on Embodied Intelligence and Humanoid Robots (Roboi), 2025.</p>
+      <h3 class="sub">Judging</h3>
+      <p>Redbird Robotics; VEX V5RC Kentucky State Championship.</p>
     </section>
 
     <section id="contact">
@@ -462,6 +510,77 @@
         document.querySelectorAll('.pub-year').forEach(function (g) { g.hidden = !g.querySelector('.pub:not([hidden])'); });
       });
     });
+  })();
+
+  (function () {
+    /* Section pills: highlight the section in view */
+    var pills = document.querySelectorAll('.pill');
+    var map = {};
+    pills.forEach(function (p) { map[p.getAttribute('data-sec')] = p; });
+    var targets = Object.keys(map).map(function (id) { return document.getElementById(id); }).filter(Boolean);
+    function spy() {
+      var y = window.scrollY + 120, cur = targets[0];
+      targets.forEach(function (t) { if (t.getBoundingClientRect().top + window.scrollY <= y) cur = t; });
+      pills.forEach(function (p) { p.classList.toggle('on', cur && p.getAttribute('data-sec') === cur.id); });
+    }
+    window.addEventListener('scroll', function () { window.requestAnimationFrame(spy); }, { passive: true });
+    spy();
+
+    /* Page search */
+    var box = document.getElementById('search'), input = document.getElementById('searchInput');
+    var count = document.getElementById('searchCount'), main = document.querySelector('main');
+    var hits = [], idx = -1, t;
+    function clear() {
+      main.querySelectorAll('mark.hit').forEach(function (m) {
+        var parent = m.parentNode; parent.replaceChild(document.createTextNode(m.textContent), m); parent.normalize();
+      });
+      hits = []; idx = -1; count.textContent = '';
+    }
+    function run() {
+      clear();
+      var q = input.value.trim();
+      if (q.length < 2) return;
+      var re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+      var walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, {
+        acceptNode: function (n) {
+          var el = n.parentNode;
+          if (!n.nodeValue.trim() || el.closest('script,style,svg,.pills,.gal-dots,button')) return NodeFilter.FILTER_REJECT;
+          return NodeFilter.FILTER_ACCEPT;
+        }
+      });
+      var nodes = []; while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (n) {
+        var text = n.nodeValue; re.lastIndex = 0; if (!re.test(text)) return;
+        var frag = document.createDocumentFragment(), last = 0; re.lastIndex = 0; var m;
+        while ((m = re.exec(text))) {
+          frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+          var mk = document.createElement('mark'); mk.className = 'hit'; mk.textContent = m[0]; frag.appendChild(mk); hits.push(mk);
+          last = m.index + m[0].length;
+        }
+        frag.appendChild(document.createTextNode(text.slice(last)));
+        n.parentNode.replaceChild(frag, n);
+      });
+      main.querySelectorAll('.pub[hidden], .pub-year[hidden]').forEach(function (e) { if (e.querySelector('mark.hit')) e.hidden = false; });
+      count.textContent = hits.length ? hits.length + (hits.length === 1 ? ' match' : ' matches') : 'No matches';
+      if (hits.length) go(0);
+    }
+    function go(i) {
+      if (!hits.length) return;
+      if (idx >= 0 && hits[idx]) hits[idx].classList.remove('cur');
+      idx = (i + hits.length) % hits.length;
+      hits[idx].classList.add('cur');
+      hits[idx].scrollIntoView({ block: 'center', behavior: 'smooth' });
+      count.textContent = (idx + 1) + ' of ' + hits.length;
+    }
+    input.addEventListener('input', function () { clearTimeout(t); t = setTimeout(run, 250); });
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') { e.preventDefault(); go(idx + (e.shiftKey ? -1 : 1)); }
+      if (e.key === 'Escape') { input.value = ''; clear(); box.classList.remove('open'); input.blur(); }
+    });
+    document.getElementById('searchOpen').addEventListener('click', function () {
+      box.classList.add('open'); input.focus();
+    });
+    input.addEventListener('blur', function () { if (!input.value) box.classList.remove('open'); });
   })();
 </script>
 </body>
