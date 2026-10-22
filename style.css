@@ -198,3 +198,4 @@ footer { margin-top: 24px; padding: 24px 0; border-top: 1px solid var(--line); c
   .fpub { grid-template-columns: 1fr; }
   .news li { grid-template-columns: 1fr; gap: 2px; }
 }
+.service { margin: -6px 0 16px; }
