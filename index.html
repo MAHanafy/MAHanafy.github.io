@@ -7,8 +7,11 @@
 <meta name="description" content="Mohamed A. Hanafy, Ph.D. candidate in Electrical and Computer Engineering at the University of Louisville (LARRI). EEG brain-computer interfaces, adaptive robot control, assistive robotics, and human-robot interaction.">
 <meta property="og:title" content="Mohamed A. Hanafy">
 <meta property="og:description" content="AI-driven brain-computer interfaces, adaptive robotic control, and human-robot interaction.">
-<meta property="og:image" content="https://avatars.githubusercontent.com/u/82918011?v=4">
-<link rel="icon" href="https://avatars.githubusercontent.com/u/82918011?v=4">
+<meta property="og:image" content="https://mahanafy.github.io/images/profile.jpg">
+<link rel="icon" href="images/profile.jpg">
+<script>
+  try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -16,282 +19,252 @@
 <body>
 
 <header class="nav">
-  <div class="wrap nav-inner">
+  <div class="shell nav-inner">
     <a class="brand" href="#top">Mohamed A. Hanafy</a>
     <nav>
       <a href="#about">About</a>
-      <a href="#research">Research</a>
+      <a href="#media">Media</a>
       <a href="#publications">Publications</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#awards">Awards</a>
-      <a href="#contact">Contact</a>
     </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></svg>
+    </button>
   </div>
 </header>
 
-<main id="top" class="wrap">
+<div class="shell layout" id="top">
 
-  <section class="hero" id="about">
-    <img class="avatar" src="images/profile.jpg" onerror="this.onerror=null;this.src='https://avatars.githubusercontent.com/u/82918011?v=4'" alt="Mohamed A. Hanafy">
-    <div>
-      <h1>Mohamed A. Hanafy</h1>
-      <p class="role">Ph.D. Candidate, Electrical and Computer Engineering<br>
-        University of Louisville &middot; Louisville Automation and Robotics Research Institute (LARRI)</p>
-      <p>I am a Ph.D. candidate and Graduate Research Assistant at LARRI, advised by Dr. Dan O. Popa.
-        I work on AI-driven brain-computer interfaces (BCIs), multimodal signal processing, adaptive robotic control, and human-robot interaction.
-        My NSF-supported research focuses on decoding human intent in real time from EEG, physiological, behavioral, and speech signals
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <img class="avatar" src="images/profile.jpg" alt="Mohamed A. Hanafy">
+    <h1>Mohamed A. Hanafy</h1>
+    <p class="title">Ph.D. Candidate</p>
+    <p class="affil">Electrical and Computer Engineering<br>University of Louisville<br>LARRI, Louisville, KY</p>
+    <ul class="profiles">
+      <li><a href="mailto:mohamed.hanafy@louisville.edu"><span class="ic">@</span>Email</a></li>
+      <li><a href="https://scholar.google.com/citations?user=9N1AxUoAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span class="ic">GS</span>Google Scholar</a></li>
+      <li><a href="https://orcid.org/0009-0000-3855-9502" target="_blank" rel="noopener"><span class="ic">iD</span>ORCID</a></li>
+      <li><a href="https://www.researchgate.net/profile/Mohamed-Hanafy-18" target="_blank" rel="noopener"><span class="ic">RG</span>ResearchGate</a></li>
+      <li><a href="https://www.linkedin.com/in/mahanafy/" target="_blank" rel="noopener"><span class="ic">in</span>LinkedIn</a></li>
+      <li><a href="https://github.com/MAHanafy" target="_blank" rel="noopener"><span class="ic">&lt;/&gt;</span>GitHub</a></li>
+      <li><a href="cv.pdf" target="_blank" rel="noopener"><span class="ic">CV</span>Curriculum Vitae</a></li>
+    </ul>
+  </aside>
+
+  <main>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a Ph.D. candidate and Graduate Research Assistant at the Louisville Automation and Robotics Research Institute (LARRI), University of Louisville, advised by Dr. Dan O. Popa.
+        I work on AI-driven brain-computer interfaces (BCIs), multimodal signal processing, adaptive robotic control, and human-robot interaction.</p>
+      <p>My NSF-supported research focuses on decoding human intent in real time from EEG, physiological, behavioral, and speech signals
         to improve assistive mobility, rehabilitation robotics, patient-assistance systems, and industrial automation.</p>
-      <p>Dissertation: <em>Robust Brain-Computer and Multimodal Interfaces for Adaptive Shared Control in Human-Robot Interaction.</em></p>
-      <div class="links">
-        <a class="btn" href="mailto:mohamed.hanafy@louisville.edu">Email</a>
-        <a class="btn" href="https://scholar.google.com/citations?user=9N1AxUoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="btn" href="https://github.com/MAHanafy" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="cv.pdf" target="_blank" rel="noopener">CV</a>
-        <a class="btn" href="https://www.linkedin.com/in/mahanafy/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </section>
+      <p class="diss"><span>Dissertation</span> Robust Brain-Computer and Multimodal Interfaces for Adaptive Shared Control in Human-Robot Interaction</p>
+    </section>
 
-  <section id="news">
-    <h2>News</h2>
-    <ul class="news">
-      <li><span class="date">Oct 2026</span><span>Presented two works at <strong>IEEE IROS 2026</strong>, Pittsburgh: EEG motor imagery for assistive robot navigation, and the evaluation of a robotic nursing assistant from neuroadaptive ambulation to hospital deployment.</span></li>
-      <li><span class="date">2026</span><span>New journal article in <em>Electronics</em> (MDPI): real-time neuroadaptive control with tactile calibration for physical human-robot interaction.</span></li>
-      <li><span class="date">2026</span><span>Completed the 130-hour g.tec BCI &amp; Neurotechnology Spring School.</span></li>
-      <li><span class="date">2025</span><span>Received the Theobald Scholarship Award, University of Louisville.</span></li>
-      <li><span class="date">2025</span><span>Journal article in <em>Technologies</em> (MDPI) on temporal robustness of motor-imagery BCIs.</span></li>
-    </ul>
-  </section>
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li><span class="date">Oct 2026</span><span>Presented two works at <strong>IEEE IROS 2026</strong>, Pittsburgh: EEG motor imagery for assistive robot navigation, and the evaluation of a robotic nursing assistant from neuroadaptive ambulation to hospital deployment.</span></li>
+        <li><span class="date">2026</span><span>New journal article in <em>Electronics</em> (MDPI): real-time neuroadaptive control with tactile calibration for physical human-robot interaction.</span></li>
+        <li><span class="date">2026</span><span>Completed the 130-hour g.tec BCI &amp; Neurotechnology Spring School.</span></li>
+        <li><span class="date">2025</span><span>Received the Theobald Scholarship Award, University of Louisville.</span></li>
+        <li><span class="date">2025</span><span>Journal article in <em>Technologies</em> (MDPI) on temporal robustness of motor-imagery BCIs.</span></li>
+      </ul>
+    </section>
 
-  <section id="research">
-    <h2>Research Interests</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>EEG Brain-Computer Interfaces</h3>
-        <p>Real-time motor-intent decoding, robustness of motor-imagery BCIs across sessions and time, and BCI control of assistive robots.</p>
+    <section id="media">
+      <h2>Research in Action</h2>
+      <div class="media-grid">
+        <figure class="media-card">
+          <video controls preload="metadata" playsinline poster="media/iros26-eeg-cover.jpg">
+            <source src="media/iros26-eeg.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <strong>Steering an assistive robot with EEG motor imagery</strong>
+            <span>IEEE IROS 2026 Workshop, Pittsburgh</span>
+            <span class="mlinks"><a href="media/iros26-eeg-poster.pdf" target="_blank" rel="noopener">Poster</a><a href="https://nocworkshop.github.io/2026-IROS/resources/14/IROS2026_paper_14_Hanafy.pdf" target="_blank" rel="noopener">Paper</a></span>
+          </figcaption>
+        </figure>
+        <figure class="media-card">
+          <video controls preload="metadata" playsinline poster="media/petra25-cover.jpg">
+            <source src="media/petra25.mp4" type="video/mp4">
+          </video>
+          <figcaption>
+            <strong>Decoding hand and foot motor imagery with a robust EEG BCI</strong>
+            <span>ACM PETRA 2025, conference talk</span>
+          </figcaption>
+        </figure>
+        <figure class="media-card">
+          <a class="poster-link" href="media/iros26-arna-poster.jpg" target="_blank" rel="noopener"><img src="images/pubs/iros26-arna.jpg" alt="ARNA robotic nursing assistant platform, nursing-education ambulation, and hospital nurse-guided walking" loading="lazy"></a>
+          <figcaption>
+            <strong>ARNA: from neuroadaptive ambulation to hospital deployment</strong>
+            <span>IEEE IROS 2026, Pittsburgh</span>
+            <span class="mlinks"><a href="media/iros26-arna-poster.jpg" target="_blank" rel="noopener">Poster</a></span>
+          </figcaption>
+        </figure>
       </div>
-      <div class="card">
-        <h3>Neural and Adaptive Control</h3>
-        <p>Neuroadaptive controllers and adaptive user interfaces that make robot teleoperation and physical interaction smoother and safer.</p>
-      </div>
-      <div class="card">
-        <h3>Healthcare and Assistive Robotics</h3>
-        <p>The Adaptive Robotic Nursing Assistant (ARNA): patient ambulation, tactile sensing, adverse-event detection, and hospital deployment.</p>
-      </div>
-      <div class="card">
-        <h3>Multimodal Signal Processing and Vision</h3>
-        <p>EEG, speech, and physiological signals; computer vision for logistics automation; compressed sensing for wireless health monitoring.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="publications">
-    <h2>Publications</h2>
-    <p class="muted small">Full list on <a href="https://scholar.google.com/citations?user=9N1AxUoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    <section id="research">
+      <h2>Research Interests</h2>
+      <div class="cards">
+        <div class="card"><h3>EEG Brain-Computer Interfaces</h3><p>Real-time motor-intent decoding, robustness of motor-imagery BCIs across sessions and time, and BCI control of assistive robots.</p></div>
+        <div class="card"><h3>Neural and Adaptive Control</h3><p>Neuroadaptive controllers and adaptive user interfaces that make robot teleoperation and physical interaction smoother and safer.</p></div>
+        <div class="card"><h3>Healthcare and Assistive Robotics</h3><p>The Adaptive Robotic Nursing Assistant (ARNA): patient ambulation, tactile sensing, adverse-event detection, and hospital deployment.</p></div>
+        <div class="card"><h3>Multimodal Signal Processing and Vision</h3><p>EEG, speech, and physiological signals; computer vision for logistics automation; compressed sensing for wireless health monitoring.</p></div>
+      </div>
+    </section>
 
-    <h3 class="sub">Journal Articles</h3>
-    <ol class="pubs">
-      <li>
-        <p class="pub-title">Real-Time Neuroadaptive Control with Tactile Calibration for Physical Human-Robot Interaction</p>
-        <p class="pub-authors">A. Prakash, <strong>M. A. Hanafy</strong>, J. Dowdy, D. O. Popa</p>
-        <p class="pub-venue">Electronics, MDPI, 2026</p>
-      </li>
-      <li>
-        <p class="pub-title">A Dual-Validation Framework for Temporal Robustness Assessment in Motor Imagery Brain-Computer Interfaces</p>
-        <p class="pub-authors"><strong>M. A. Hanafy</strong>, S. Yusufjonov, P. SharafianArdakani, D. Yusufjonov, M. M. Rayguru, D. O. Popa</p>
-        <p class="pub-venue">Technologies, MDPI, 2025</p>
-      </li>
-      <li>
-        <p class="pub-title">Evaluation of a Neuroadaptive Controller in Admittance Control of a Mobile Robot for Physical Human-Robot Interaction</p>
-        <p class="pub-authors">P. SharafianArdakani, S. Abubakar, S. K. Das, S. Surupa, <strong>M. A. Hanafy</strong>, M. M. Rayguru, D. O. Popa</p>
-        <p class="pub-venue">Intelligent Service Robotics, 2025</p>
-      </li>
-      <li>
-        <p class="pub-title">Adaptive User Interface with Parallel Neural Networks for Robot Teleoperation</p>
-        <p class="pub-authors">P. SharafianArdakani, <strong>M. A. Hanafy</strong>, I. Kondaurova, A. Ashary, M. M. Rayguru, D. O. Popa</p>
-        <p class="pub-venue">IEEE Robotics and Automation Letters (RA-L), 2024; presented at ICRA 2025</p>
-      </li>
-      <li>
-        <p class="pub-title">Rakeness with Block Sparse Bayesian Learning for Efficient ZigBee-Based EEG Telemonitoring</p>
-        <p class="pub-authors"><strong>M. A. Hanafy</strong>, H. S. Ali, A. A. Shaalan</p>
-        <p class="pub-venue">International Journal of Communication Systems, Wiley, 2019</p>
-      </li>
-    </ol>
+    <section id="publications">
+      <h2>Publications</h2>
+      <p class="muted small">Full list on <a href="https://scholar.google.com/citations?user=9N1AxUoAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
 
-    <h3 class="sub">Conference and Workshop Papers</h3>
-    <ol class="pubs" start="6">
-      <li>
-        <p class="pub-title">Toward Robust Assistive Robot Navigation with EEG Motor-Imagery</p>
-        <p class="pub-authors"><strong>M. A. Hanafy</strong>, A. Prakash, S. Yusufjonov, M. M. Rayguru, D. O. Popa</p>
-        <p class="pub-venue">IEEE/RSJ IROS 2026 Workshop on Nonverbal Cues for Human-Robot Cooperative Intelligence</p>
-        <p class="pub-links">
-          <a href="https://nocworkshop.github.io/2026-IROS/resources/14/IROS2026_paper_14_Hanafy.pdf" target="_blank" rel="noopener">PDF</a>
-          <a href="https://nocworkshop.github.io/2026-IROS/resources/14/IROS26_paper_14_Poster_Hanafy.pdf" target="_blank" rel="noopener">Poster</a>
-          <a href="https://nocworkshop.github.io/2026-IROS/resources/14/video.mp4" target="_blank" rel="noopener">Video</a>
-          <a href="https://nocworkshop.github.io/2026-IROS/" target="_blank" rel="noopener">Workshop</a>
-        </p>
-      </li>
-      <li>
-        <p class="pub-title">A Robust EEG Brain-Computer Interface Approach for Decoding Hand and Foot Motor Imagery</p>
-        <p class="pub-authors"><strong>M. A. Hanafy</strong>, S. Yusufjonov, D. Yusufjonov, P. SharafianArdakani, M. M. Rayguru, D. O. Popa</p>
-        <p class="pub-venue">ACM 18th International Conference on PErvasive Technologies Related to Assistive Environments (PETRA), 2025</p>
-      </li>
-      <li>
-        <p class="pub-title">Assessment of BCI Performance for Human-Robot Interaction</p>
-        <p class="pub-authors"><strong>M. A. Hanafy</strong>, H. L. Reynolds, J. Jones, D. Harris, D. O. Popa</p>
-        <p class="pub-venue">ACM 17th PETRA Conference, 2024</p>
-      </li>
-      <li>
-        <p class="pub-title">Comparative Study of One-Handed vs. Two-Handed EEG Intent Recognition for Applications in Human-Robot Interaction</p>
-        <p class="pub-authors">H. L. Reynolds, <strong>M. A. Hanafy</strong>, J. Jones, D. Harris, D. O. Popa</p>
-        <p class="pub-venue">ACM 17th PETRA Conference, 2024 <span class="award">Best Workshop Student Paper Award</span></p>
-      </li>
-      <li>
-        <p class="pub-title">Compressed Sensing for Reliable Body Area Propagation with Efficient Signal Reconstruction</p>
-        <p class="pub-authors"><strong>M. A. Hanafy</strong>, H. S. Ali, A. A. Shaalan</p>
-        <p class="pub-venue">29th International Conference on Microelectronics (ICM), 2017</p>
-      </li>
-    </ol>
+      <h3 class="sub">Selected Publications</h3>
+      <div class="featured">
+        <article class="fpub">
+          <a class="thumb" href="images/pubs/iros26-eeg.jpg" target="_blank" rel="noopener"><img src="images/pubs/iros26-eeg.jpg" alt="EEG motor-imagery decoding and decision-point shared control pipeline" loading="lazy"></a>
+          <div>
+            <p class="pub-title">Toward Robust Assistive Robot Navigation with EEG Motor-Imagery</p>
+            <p class="pub-authors"><strong>M. A. Hanafy</strong>, A. Prakash, S. Yusufjonov, M. M. Rayguru, D. O. Popa</p>
+            <p class="pub-venue">IEEE/RSJ IROS 2026 Workshop on Nonverbal Cues for Human-Robot Cooperative Intelligence</p>
+            <p class="pub-links">
+              <a href="https://nocworkshop.github.io/2026-IROS/resources/14/IROS2026_paper_14_Hanafy.pdf" target="_blank" rel="noopener">PDF</a>
+              <a href="media/iros26-eeg-poster.pdf" target="_blank" rel="noopener">Poster</a>
+              <a href="#media">Video</a>
+            </p>
+          </div>
+        </article>
+        <article class="fpub">
+          <a class="thumb" href="images/pubs/iros26-arna.jpg" target="_blank" rel="noopener"><img src="images/pubs/iros26-arna.jpg" alt="ARNA robotic nursing assistant" loading="lazy"></a>
+          <div>
+            <p class="pub-title">Evaluation of a Robotic Nursing Assistant from Neuroadaptive Ambulation to Hospital Deployment</p>
+            <p class="pub-authors"><strong>M. A. Hanafy</strong>, P. SharafianArdakani, M. M. Rayguru, D. O. Popa</p>
+            <p class="pub-venue">IEEE/RSJ IROS 2026, Pittsburgh (presentation)</p>
+            <p class="pub-links"><a href="media/iros26-arna-poster.jpg" target="_blank" rel="noopener">Poster</a></p>
+          </div>
+        </article>
+        <article class="fpub">
+          <a class="thumb" href="images/pubs/petra25.jpg" target="_blank" rel="noopener"><img src="images/pubs/petra25.jpg" alt="Proposed hand and foot motor-imagery BCI system" loading="lazy"></a>
+          <div>
+            <p class="pub-title">A Robust EEG Brain-Computer Interface Approach for Decoding Hand and Foot Motor Imagery</p>
+            <p class="pub-authors"><strong>M. A. Hanafy</strong>, S. Yusufjonov, D. Yusufjonov, P. SharafianArdakani, M. M. Rayguru, D. O. Popa</p>
+            <p class="pub-venue">ACM PETRA 2025</p>
+            <p class="pub-links"><a href="#media">Video</a></p>
+          </div>
+        </article>
+      </div>
 
-    <h3 class="sub">Under Review</h3>
-    <ol class="pubs" start="11">
-      <li>
-        <p class="pub-title">Tactile Handlebar and Deep Learning for Safe Interaction with a Robot Nursing Assistant</p>
-        <p class="pub-venue">Submitted to IEEE Transactions on Medical Robotics and Bionics, 2026</p>
-      </li>
-    </ol>
-  </section>
+      <h3 class="sub">Journal Articles</h3>
+      <ol class="pubs">
+        <li><p class="pub-title">Real-Time Neuroadaptive Control with Tactile Calibration for Physical Human-Robot Interaction</p><p class="pub-authors">A. Prakash, <strong>M. A. Hanafy</strong>, J. Dowdy, D. O. Popa</p><p class="pub-venue">Electronics, MDPI, 2026</p></li>
+        <li><p class="pub-title">A Dual-Validation Framework for Temporal Robustness Assessment in Motor Imagery Brain-Computer Interfaces</p><p class="pub-authors"><strong>M. A. Hanafy</strong>, S. Yusufjonov, P. SharafianArdakani, D. Yusufjonov, M. M. Rayguru, D. O. Popa</p><p class="pub-venue">Technologies, MDPI, 2025</p></li>
+        <li><p class="pub-title">Evaluation of a Neuroadaptive Controller in Admittance Control of a Mobile Robot for Physical Human-Robot Interaction</p><p class="pub-authors">P. SharafianArdakani, S. Abubakar, S. K. Das, S. Surupa, <strong>M. A. Hanafy</strong>, M. M. Rayguru, D. O. Popa</p><p class="pub-venue">Intelligent Service Robotics, 2025</p></li>
+        <li><p class="pub-title">Adaptive User Interface with Parallel Neural Networks for Robot Teleoperation</p><p class="pub-authors">P. SharafianArdakani, <strong>M. A. Hanafy</strong>, I. Kondaurova, A. Ashary, M. M. Rayguru, D. O. Popa</p><p class="pub-venue">IEEE Robotics and Automation Letters (RA-L), 2024; presented at ICRA 2025</p></li>
+        <li><p class="pub-title">Rakeness with Block Sparse Bayesian Learning for Efficient ZigBee-Based EEG Telemonitoring</p><p class="pub-authors"><strong>M. A. Hanafy</strong>, H. S. Ali, A. A. Shaalan</p><p class="pub-venue">International Journal of Communication Systems, Wiley, 2019</p></li>
+      </ol>
 
-  <section id="projects">
-    <h2>Funded Research Projects</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>NSF EPSCoR KAMPERS (#1849213)</h3>
-        <p>Kentucky Advanced Manufacturing Partnership for Enhanced Robotics and Structures. BCI, adaptive robotic control, and human-robot interaction; Study Coordinator.</p>
-        <span class="tag">NSF</span>
-      </div>
-      <div class="card">
-        <h3>NSF Future of Work (#2026584)</h3>
-        <p>Enhancing Future Work of Nursing Professionals through Collaborative Human-Robot Interfaces, built around the ARNA nursing-assistant robot.</p>
-        <span class="tag">NSF</span>
-      </div>
-      <div class="card">
-        <h3>UPS Robotic Manipulation for Sorting</h3>
-        <p>Computer vision for object detection, grasp efficiency, and barcode identification in logistics automation (Phases I and II).</p>
-        <span class="tag">Industry</span>
-      </div>
-      <div class="card">
-        <h3>Jon Rieger Seed Grant</h3>
-        <p>AI-enabled analysis of emotions in daylong child-centered speech recordings, with UofL and Washington State University.</p>
-        <span class="tag">Seed Grant</span>
-      </div>
-    </div>
+      <h3 class="sub">Conference and Workshop Papers</h3>
+      <ol class="pubs" start="6">
+        <li><p class="pub-title">Toward Robust Assistive Robot Navigation with EEG Motor-Imagery</p><p class="pub-authors"><strong>M. A. Hanafy</strong>, A. Prakash, S. Yusufjonov, M. M. Rayguru, D. O. Popa</p><p class="pub-venue">IEEE/RSJ IROS 2026 Workshop on Nonverbal Cues for Human-Robot Cooperative Intelligence</p></li>
+        <li><p class="pub-title">A Robust EEG Brain-Computer Interface Approach for Decoding Hand and Foot Motor Imagery</p><p class="pub-authors"><strong>M. A. Hanafy</strong>, S. Yusufjonov, D. Yusufjonov, P. SharafianArdakani, M. M. Rayguru, D. O. Popa</p><p class="pub-venue">ACM 18th International Conference on PErvasive Technologies Related to Assistive Environments (PETRA), 2025</p></li>
+        <li><p class="pub-title">Assessment of BCI Performance for Human-Robot Interaction</p><p class="pub-authors"><strong>M. A. Hanafy</strong>, H. L. Reynolds, J. Jones, D. Harris, D. O. Popa</p><p class="pub-venue">ACM 17th PETRA Conference, 2024</p></li>
+        <li><p class="pub-title">Comparative Study of One-Handed vs. Two-Handed EEG Intent Recognition for Applications in Human-Robot Interaction</p><p class="pub-authors">H. L. Reynolds, <strong>M. A. Hanafy</strong>, J. Jones, D. Harris, D. O. Popa</p><p class="pub-venue">ACM 17th PETRA Conference, 2024 <span class="award">Best Workshop Student Paper Award</span></p></li>
+        <li><p class="pub-title">Compressed Sensing for Reliable Body Area Propagation with Efficient Signal Reconstruction</p><p class="pub-authors"><strong>M. A. Hanafy</strong>, H. S. Ali, A. A. Shaalan</p><p class="pub-venue">29th International Conference on Microelectronics (ICM), 2017</p></li>
+      </ol>
 
-    <h2 class="mt">Code</h2>
-    <div class="cards">
-      <a class="card link-card" href="https://github.com/MAHanafy/EEG_Data_Collector" target="_blank" rel="noopener">
-        <h3>EEG Data Collector</h3>
-        <p>Tools for recording EEG motor-imagery sessions.</p>
-        <span class="tag">Python</span>
-      </a>
-      <a class="card link-card" href="https://github.com/MAHanafy/Motor_Imagery_WS_CS_P" target="_blank" rel="noopener">
-        <h3>Motor Imagery Pipeline</h3>
-        <p>Motor-imagery classification and evaluation code.</p>
-        <span class="tag">Python</span>
-      </a>
-      <a class="card link-card" href="https://github.com/MAHanafy/EEG_dataset_H_F" target="_blank" rel="noopener">
-        <h3>Hand and Foot EEG Dataset</h3>
-        <p>EEG motor-imagery data for hand and foot movements.</p>
-        <span class="tag">Dataset</span>
-      </a>
-      <a class="card link-card" href="https://github.com/MAHanafy/LENA-Analysis" target="_blank" rel="noopener">
-        <h3>LENA Analysis</h3>
-        <p>MATLAB pipeline for analyzing LENA recordings, classifying interactions, and computing pitch and loudness measures.</p>
-        <span class="tag">MATLAB</span>
-      </a>
-    </div>
-  </section>
+      <h3 class="sub">Under Review</h3>
+      <ol class="pubs" start="11">
+        <li><p class="pub-title">Tactile Handlebar and Deep Learning for Safe Interaction with a Robot Nursing Assistant</p><p class="pub-venue">Submitted to IEEE Transactions on Medical Robotics and Bionics, 2026</p></li>
+      </ol>
+    </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <div class="timeline">
-      <div class="t-item">
-        <p class="t-title">Graduate Research Assistant: AI, BCI, Robotics, and HRI <span class="muted">Sep 2023 to present</span></p>
-        <p class="muted">LARRI, University of Louisville</p>
-        <p>EEG-based BCI frameworks, neuroadaptive control, ARNA healthcare robotics, and computer vision for logistics. Mentor a multidisciplinary student BCI team.</p>
+    <section id="projects">
+      <h2>Funded Research Projects</h2>
+      <div class="cards">
+        <div class="card"><h3>NSF EPSCoR KAMPERS (#1849213)</h3><p>Kentucky Advanced Manufacturing Partnership for Enhanced Robotics and Structures. BCI, adaptive robotic control, and human-robot interaction; Study Coordinator.</p><span class="tag">NSF</span></div>
+        <div class="card"><h3>NSF Future of Work (#2026584)</h3><p>Enhancing Future Work of Nursing Professionals through Collaborative Human-Robot Interfaces, built around the ARNA nursing-assistant robot.</p><span class="tag">NSF</span></div>
+        <div class="card"><h3>UPS Robotic Manipulation for Sorting</h3><p>Computer vision for object detection, grasp efficiency, and barcode identification in logistics automation (Phases I and II).</p><span class="tag">Industry</span></div>
+        <div class="card"><h3>Jon Rieger Seed Grant</h3><p>AI-enabled analysis of emotions in daylong child-centered speech recordings, with UofL and Washington State University.</p><span class="tag">Seed Grant</span></div>
       </div>
-      <div class="t-item">
-        <p class="t-title">Research Collaborator: Multimodal Speech and Healthcare Analytics <span class="muted">Jan 2026 to present</span></p>
-        <p class="muted">University of Louisville and Washington State University</p>
-        <p>Automated acoustic-analysis pipelines and speech emotion recognition for child-centered speech recordings.</p>
-      </div>
-      <div class="t-item">
-        <p class="t-title">Graduate Teaching Assistant <span class="muted">2023 to 2026</span></p>
-        <p class="muted">Department of ECE, University of Louisville</p>
-        <p>Control systems, digital signal processing, embedded systems, and microprocessor laboratories.</p>
-      </div>
-      <div class="t-item">
-        <p class="t-title">Graduate Research Assistant: Computer Vision and Assistive Technologies <span class="muted">Jan 2022 to Aug 2023</span></p>
-        <p class="muted">CVIP Laboratory, University of Louisville</p>
-        <p>Visual assistance for visually impaired people; 3D street mapping from monocular video with NeRFs.</p>
-      </div>
-      <div class="t-item">
-        <p class="t-title">Research and Teaching Assistant <span class="muted">2015 to 2021</span></p>
-        <p class="muted">Electronics and Communications Engineering, Zagazig University, Egypt</p>
-        <p>Compressed sensing and block sparse Bayesian learning for low-power EEG telemonitoring over body area networks.</p>
-      </div>
-    </div>
 
-    <h2 class="mt" id="education">Education</h2>
-    <div class="timeline">
-      <div class="t-item">
-        <p class="t-title">Ph.D., Electrical and Computer Engineering <span class="muted">2022 to present</span></p>
-        <p class="muted">University of Louisville, USA &middot; GPA 3.89/4.00</p>
+      <h2 class="mt">Code</h2>
+      <div class="cards">
+        <a class="card link-card" href="https://github.com/MAHanafy/EEG_Data_Collector" target="_blank" rel="noopener"><h3>EEG Data Collector</h3><p>Tools for recording EEG motor-imagery sessions.</p><span class="tag">Python</span></a>
+        <a class="card link-card" href="https://github.com/MAHanafy/Motor_Imagery_WS_CS_P" target="_blank" rel="noopener"><h3>Motor Imagery Pipeline</h3><p>Motor-imagery classification and evaluation code.</p><span class="tag">Python</span></a>
+        <a class="card link-card" href="https://github.com/MAHanafy/EEG_dataset_H_F" target="_blank" rel="noopener"><h3>Hand and Foot EEG Dataset</h3><p>EEG motor-imagery data for hand and foot movements.</p><span class="tag">Dataset</span></a>
+        <a class="card link-card" href="https://github.com/MAHanafy/LENA-Analysis" target="_blank" rel="noopener"><h3>LENA Analysis</h3><p>MATLAB pipeline for analyzing LENA recordings, classifying interactions, and computing pitch and loudness measures.</p><span class="tag">MATLAB</span></a>
       </div>
-      <div class="t-item">
-        <p class="t-title">M.S., Electronics and Communications Engineering <span class="muted">2015 to 2019</span></p>
-        <p class="muted">Zagazig University, Egypt</p>
-        <p>Thesis: Compressed Sensing for Energy-Efficient Wireless Transmission</p>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+        <div class="t-item"><p class="t-title">Graduate Research Assistant: AI, BCI, Robotics, and HRI <span class="muted">Sep 2023 to present</span></p><p class="muted">LARRI, University of Louisville</p><p>EEG-based BCI frameworks, neuroadaptive control, ARNA healthcare robotics, and computer vision for logistics. Mentor a multidisciplinary student BCI team.</p></div>
+        <div class="t-item"><p class="t-title">Research Collaborator: Multimodal Speech and Healthcare Analytics <span class="muted">Jan 2026 to present</span></p><p class="muted">University of Louisville and Washington State University</p><p>Automated acoustic-analysis pipelines and speech emotion recognition for child-centered speech recordings.</p></div>
+        <div class="t-item"><p class="t-title">Graduate Teaching Assistant <span class="muted">2023 to 2026</span></p><p class="muted">Department of ECE, University of Louisville</p><p>Control systems, digital signal processing, embedded systems, and microprocessor laboratories.</p></div>
+        <div class="t-item"><p class="t-title">Graduate Research Assistant: Computer Vision and Assistive Technologies <span class="muted">Jan 2022 to Aug 2023</span></p><p class="muted">CVIP Laboratory, University of Louisville</p><p>Visual assistance for visually impaired people; 3D street mapping from monocular video with NeRFs.</p></div>
+        <div class="t-item"><p class="t-title">Research and Teaching Assistant <span class="muted">2015 to 2021</span></p><p class="muted">Electronics and Communications Engineering, Zagazig University, Egypt</p><p>Compressed sensing and block sparse Bayesian learning for low-power EEG telemonitoring over body area networks.</p></div>
       </div>
-      <div class="t-item">
-        <p class="t-title">B.S., Electronics and Communications Engineering <span class="muted">2008 to 2013</span></p>
-        <p class="muted">Zagazig University, Egypt</p>
-        <p>Excellent with honors; ranked 1st in class</p>
+
+      <h2 class="mt" id="education">Education</h2>
+      <div class="timeline">
+        <div class="t-item"><p class="t-title">Ph.D., Electrical and Computer Engineering <span class="muted">2022 to present</span></p><p class="muted">University of Louisville, USA &middot; GPA 3.89/4.00</p></div>
+        <div class="t-item"><p class="t-title">M.S., Electronics and Communications Engineering <span class="muted">2015 to 2019</span></p><p class="muted">Zagazig University, Egypt</p><p>Thesis: Compressed Sensing for Energy-Efficient Wireless Transmission</p></div>
+        <div class="t-item"><p class="t-title">B.S., Electronics and Communications Engineering <span class="muted">2008 to 2013</span></p><p class="muted">Zagazig University, Egypt</p><p>Excellent with honors; ranked 1st in class</p></div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="awards">
-    <h2>Awards and Honors</h2>
-    <ul class="plain">
-      <li><strong>Theobald Scholarship Award</strong>, University of Louisville, 2025</li>
-      <li><strong>COABE Students as Leaders Mini Grant</strong>, 2025</li>
-      <li><strong>NSF PETRA Doctoral Consortium Award</strong>, ACM PETRA, 2024</li>
-      <li><strong>Best Workshop Student Paper Award</strong>, ACM PETRA, 2024</li>
-      <li><strong>Outstanding Poster Presentation Award</strong>, KY NSF EPSCoR, 2024</li>
-      <li><strong>Ranked 1st in undergraduate class</strong>, Zagazig University, 2013</li>
-      <li><strong>College Excellence Award</strong>, all five undergraduate years, Zagazig University, 2008 to 2013</li>
-    </ul>
+    <section id="awards">
+      <h2>Awards and Honors</h2>
+      <ul class="plain">
+        <li><strong>Theobald Scholarship Award</strong>, University of Louisville, 2025</li>
+        <li><strong>COABE Students as Leaders Mini Grant</strong>, 2025</li>
+        <li><strong>NSF PETRA Doctoral Consortium Award</strong>, ACM PETRA, 2024</li>
+        <li><strong>Best Workshop Student Paper Award</strong>, ACM PETRA, 2024</li>
+        <li><strong>Outstanding Poster Presentation Award</strong>, KY NSF EPSCoR, 2024</li>
+        <li><strong>Ranked 1st in undergraduate class</strong>, Zagazig University, 2013</li>
+        <li><strong>College Excellence Award</strong>, all five undergraduate years, Zagazig University, 2008 to 2013</li>
+      </ul>
 
-    <h2 class="mt">Service</h2>
-    <p><strong>Reviewer:</strong> IEEE Transactions on Systems, Man, and Cybernetics: Systems; IEEE Journal of Biomedical and Health Informatics; IEEE Access; International Journal of Digital Health; Frontiers in Robotics and AI; ACM PETRA; IEEE SoutheastCon; IEEE Smart Mobility; IEEE IC2AI.</p>
-    <p><strong>Program Committee:</strong> International Symposium on Embodied Intelligence and Humanoid Robots (Roboi), 2025.</p>
-    <p><strong>Judge:</strong> Redbird Robotics; VEX V5RC Kentucky State Championship.</p>
-  </section>
+      <h2 class="mt">Service</h2>
+      <p><strong>Reviewer:</strong> IEEE Transactions on Systems, Man, and Cybernetics: Systems; IEEE Journal of Biomedical and Health Informatics; IEEE Access; International Journal of Digital Health; Frontiers in Robotics and AI; ACM PETRA; IEEE SoutheastCon; IEEE Smart Mobility; IEEE IC2AI.</p>
+      <p><strong>Program Committee:</strong> International Symposium on Embodied Intelligence and Humanoid Robots (Roboi), 2025.</p>
+      <p><strong>Judge:</strong> Redbird Robotics; VEX V5RC Kentucky State Championship.</p>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Louisville Automation and Robotics Research Institute (LARRI)<br>
-       University of Louisville, Louisville, KY, USA<br>
-       <a href="mailto:mohamed.hanafy@louisville.edu">mohamed.hanafy@louisville.edu</a></p>
-  </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Louisville Automation and Robotics Research Institute (LARRI)<br>
+         University of Louisville, Louisville, KY, USA<br>
+         <a href="mailto:mohamed.hanafy@louisville.edu">mohamed.hanafy@louisville.edu</a></p>
+    </section>
 
-</main>
+  </main>
+</div>
 
 <footer>
-  <div class="wrap">&copy; 2026 Mohamed A. Hanafy</div>
+  <div class="shell">&copy; 2026 Mohamed A. Hanafy</div>
 </footer>
 
+<script>
+  (function () {
+    var root = document.documentElement, btn = document.getElementById('themeToggle');
+    function current() {
+      var t = root.getAttribute('data-theme');
+      if (t) return t;
+      return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    btn.addEventListener('click', function () {
+      var next = current() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  })();
+</script>
 </body>
 </html>
