@@ -377,3 +377,37 @@ mark.hit.cur { background: #ffb020; box-shadow: 0 0 0 2px #ffb020; }
 .roles .title { margin: 0; }
 .roles .affil { margin: 0 0 8px; }
 .roles .affil.uni { margin: 4px 0 0; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--text); }
+
+/* ---------- Posters ---------- */
+.posters { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 18px; }
+.poster-card { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+.p-img { display: block; background: #fff; border-bottom: 1px solid var(--line); }
+.p-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: contain; padding: 8px; transition: transform .25s; }
+.p-img:hover img { transform: scale(1.03); }
+.poster-card figcaption { padding: 12px 14px 14px; }
+.poster-card p { margin: 0; }
+.p-title { font-weight: 600; font-size: .95rem; line-height: 1.35; }
+.p-venue { color: var(--muted); font-size: .84rem; margin-top: 3px !important; }
+.p-links { display: flex; gap: 12px; margin-top: 6px !important; font-size: .84rem; font-weight: 500; }
+
+/* ---------- Peer review list ---------- */
+.reviews { list-style: none; margin: 0 0 8px; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.reviews li {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px 12px;
+  padding: 10px 14px; border-radius: 10px; background: var(--surface);
+  border: 1px solid var(--line); border-left: 3px solid var(--accent);
+}
+.rv-name { font-weight: 500; min-width: 0; }
+.pub-badge { font-size: .72rem; font-weight: 600; padding: 2px 9px; border-radius: 999px; color: var(--b); background: color-mix(in srgb, var(--b) 13%, transparent); }
+.pub-badge.ieee { --b: #6b3fa0; }
+.pub-badge.frontiers { --b: #c2410c; }
+.pub-badge.acm { --b: #1d63b8; }
+:root[data-theme="dark"] .pub-badge.ieee { --b: #c4a3f0; }
+:root[data-theme="dark"] .pub-badge.frontiers { --b: #fb9a5c; }
+:root[data-theme="dark"] .pub-badge.acm { --b: #7fb0ec; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .pub-badge.ieee { --b: #c4a3f0; }
+  :root:not([data-theme="light"]) .pub-badge.frontiers { --b: #fb9a5c; }
+  :root:not([data-theme="light"]) .pub-badge.acm { --b: #7fb0ec; }
+}
+.rv-link { margin-left: auto; display: inline-flex; align-items: center; gap: 5px; font-size: .86rem; font-weight: 500; white-space: nowrap; }
