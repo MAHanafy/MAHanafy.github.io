@@ -371,3 +371,9 @@ mark.hit.cur { background: #ffb020; box-shadow: 0 0 0 2px #ffb020; }
 .nav-inner { position: relative; }
 @media (max-width: 860px) { .theme-toggle { margin-left: 12px; } }
 .ic-rg { display: flex !important; align-items: center; justify-content: center; } .ic-rg sup { line-height: 1; align-self: flex-start; margin-top: 7px; }
+
+/* Sidebar roles */
+.roles { display: flex; flex-direction: column; gap: 2px; margin: 6px 0 18px; }
+.roles .title { margin: 0; }
+.roles .affil { margin: 0 0 8px; }
+.roles .affil.uni { margin: 4px 0 0; padding-top: 10px; border-top: 1px dashed var(--line); color: var(--text); }
