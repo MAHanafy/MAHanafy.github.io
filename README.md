@@ -6,4 +6,5 @@ I am a Ph.D. candidate in Electrical and Computer Engineering at the University 
 
 - Google Scholar: [profile](https://scholar.google.com/citations?user=9N1AxUoAAAAJ&hl=en)
 - LinkedIn: [mahanafy](https://www.linkedin.com/in/mahanafy/)
-- Email: mohamed.hanafy@louisville.edu
+- Email: mohamed.hanafy@louisville.edu | mahanafy9@gmail.com
+- 
